@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-500 font-sans;
+  }
+}
+
+@layer components {
+  .layout-container {
+    /* width: calc(100vw - theme(spacing.60)); */
+    margin-left: theme(spacing.60);
+  }
+  .content-area {
+    min-height: calc(100vh - theme(spacing.14));
+  }
+  .page-main {
+    @apply p-6 pt-0 mx-auto max-w-[90vw] md:max-w-[80vw];
+  }
+  .page-container {
+    @apply p-4 bg-white rounded;
+  }
+  .page-block {
+    @apply pb-6;
+  }
+  .form-control {
+    @apply w-full h-auto min-h-[40px] flex flex-col;
+  }
+  .form-label {
+    @apply flex justify-start items-center w-full h-10 text-sm text-gray-500;
+  }
+  .form-error {
+    @apply flex justify-start items-center w-full h-8 text-sm text-red-500;
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    @apply px-4 py-2 border border-gray-200 rounded outline-none hover:border-gray-300 focus:border-gray-800;
+  }
+  .navs .active {
+    @apply bg-gray-200 rounded text-gray-800;
+  }
+  .navs .subnavs .active {
+    @apply bg-transparent text-gray-800;
+  }
+  .table {
+    @apply border border-gray-300 bg-white;
+  }
+  .table th {
+    @apply px-3 py-2 font-normal text-gray-800 bg-gray-200 border-b-2 border-gray-300 text-left;
+  }
+  .table td {
+    @apply px-3 py-2 text-gray-600 text-left border-b border-gray-300;
+  }
+  .table tbody tr:nth-child(2n) td {
+    @apply bg-gray-50;
+  }
+  /* .table tbody tr:hover td {
+    @apply bg-blue-100;
+  } */
+  .table thead tr th:nth-last-of-type(1),
+  .table tbody tr td:nth-last-of-type(1) {
+    @apply text-right;
+  }
+  .divider-line {
+    @apply mx-auto my-10 w-full h-[1px] md:w-[40vw] border-b border-gray-200 dark:border-gray-700;
+  }
+}
